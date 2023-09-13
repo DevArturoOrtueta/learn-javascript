@@ -21,4 +21,8 @@ Los scope que existen son:
 - Global Scope: Este scope permite declarar una variable y puede ser utilizada por cualquier funcion.
 
 ## 04-objects
+En esta carpeta se encuentra un archivo js en el cual se ve el uso de los objetos y como crearlos en Javascript.
 
+Un objeto es una coleccion de datos almacenados en llaves o propiedades que son añadidas a la variable en cuestion, esta variable puede poseer mas informacion que una simple variable de string.
+
+En el archivo js dentro de la carpeta se podra ver varias tecnicas de uso de los objetos en Javascript.
