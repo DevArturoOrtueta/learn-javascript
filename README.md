@@ -19,3 +19,6 @@ Los scope que existen son:
 - Block Scope:Lo declarado dentro de este scope solo puede ser utilizado por lo de adentro, no puede ser utilizado fuera del scope, por ejemplo dentro de un objeto.
 - Function Scope: Lo declarado dentro de la funcion solo puede ser utilizado por la funcion, no puede ser utilizado fuera de la funcion.
 - Global Scope: Este scope permite declarar una variable y puede ser utilizada por cualquier funcion.
+
+## 04-objects
+
