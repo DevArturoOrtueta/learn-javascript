@@ -13,3 +13,9 @@ Un hoisting es un termino utilizado en Javascript  para cuando las variables y f
 En esta carpeta se encuentra un archivo js en el cual se ve el uso de los scope en Javascript.
 
 Un scope es un termino utilizado en Javascript para mencionar el nivel de ejecucion del codigo en Javascript, ya sea global o local en cuanto a declaraciones. Si declaramos una variable dentro de una funcion, solo puede ser utilizada dentro de ese bloque de codigo, si intento utilizarla fuera de la funcion, Javascript me indicara que la variable no fue declarada.
+
+Los scope que existen son:
+
+- Block Scope:Lo declarado dentro de este scope solo puede ser utilizado por lo de adentro, no puede ser utilizado fuera del scope, por ejemplo dentro de un objeto.
+- Function Scope: Lo declarado dentro de la funcion solo puede ser utilizado por la funcion, no puede ser utilizado fuera de la funcion.
+- Global Scope: Este scope permite declarar una variable y puede ser utilizada por cualquier funcion.
