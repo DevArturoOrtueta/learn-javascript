@@ -156,3 +156,6 @@ Adiciones al núcleo de ECMAScript para funcionalidades sensibles al lenguaje.
 - WebAssembly.RuntimeError (en-US)
 ### Otro
 - arguments
+
+## 06-conversion
+En esta carpeta se puede encontrar la practica de conversiones (Parse)
