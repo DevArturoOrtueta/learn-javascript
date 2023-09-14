@@ -162,3 +162,6 @@ En esta carpeta se puede encontrar la practica de conversiones (Parse)
 
 ## 07-arrays
 En esta carpeta se puede encontrar todo lo referente a Arrays.
+
+Se tratan temas como la declaracion de un Array, ademas de como llenar las mismas y sus funciones mas comunes como length, pop, push, shift y unshift.
+Cabe destacar que pop y push son mas rapidas en ejecucion que shift y unshift.
