@@ -165,3 +165,9 @@ En esta carpeta se puede encontrar todo lo referente a Arrays.
 
 Se tratan temas como la declaracion de un Array, ademas de como llenar las mismas y sus funciones mas comunes como length, pop, push, shift y unshift.
 Cabe destacar que pop y push son mas rapidas en ejecucion que shift y unshift.
+
+## 08-objects
+En esta carpeta se puede encontrar todo lo referente a los objetos.
+Se tratan los temas como la declaracion de objetos y su llamado.
+
+Ademas se vio el uso del fetch api para llamar un API REST.
