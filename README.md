@@ -159,3 +159,6 @@ Adiciones al núcleo de ECMAScript para funcionalidades sensibles al lenguaje.
 
 ## 06-conversion
 En esta carpeta se puede encontrar la practica de conversiones (Parse)
+
+## 07-arrays
+En esta carpeta se puede encontrar todo lo referente a Arrays.
