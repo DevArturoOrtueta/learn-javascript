@@ -68,3 +68,83 @@ class ClearableWeakMap {
       return this;
     }
   }
+
+//   Utilizando el objeto Set
+
+const mySet1 = new Set();
+
+mySet1.add(1); // Set [ 1 ]
+mySet1.add(5); // Set [ 1, 5 ]
+mySet1.add(5); // Set [ 1, 5 ]
+mySet1.add("algún texto"); // Set [ 1, 5, 'algún texto' ]
+const o = { a: 1, b: 2 };
+mySet1.add(o);
+
+mySet1.add({ a: 1, b: 2 }); // o está haciendo referencia a un objeto diferente,
+// por lo que está bien
+
+mySet1.has(1); // true
+mySet1.has(3); // false, ya que 3 no se ha agregado al conjunto
+mySet1.has(5); // true
+mySet1.has(Math.sqrt(25)); // true
+mySet1.has("Algún Texto".toLowerCase()); // true
+mySet1.has(o); // true
+
+mySet1.size; // 5
+
+mySet1.delete(5); // elimina 5 del conjunto
+mySet1.has(5); // false, 5 ha sido eliminado
+
+mySet1.size; // 4, ya que acabamos de eliminar un valor
+
+console.log(mySet1);
+// imprime en consola Set(4) [ 1, "algún texto", {…}, {…} ] en Firefox
+// imprime en consola Set(4) { 1, "algún texto", {…}, {…} } en Chrome
+
+// Iterando Set
+
+// iterar sobre los elementos en Set
+// imprime en consola los elementos en el orden:
+//   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+for (let item of mySet1) console.log(item)
+
+// imprime en consola los elementos en el orden:
+//   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+for (let item of mySet1.keys()) console.log(item)
+
+// imprime en consola los elementos en el orden:
+//   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+for (let item of mySet1.values()) console.log(item)
+
+// imprime en consola los elementos en el orden:
+//   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+// (key y value son los mismos aquí)
+for (let [key, value] of mySet1.entries()) console.log(key)
+
+// convertir el objeto Set en un objeto Array, con Array.from
+const myArr = Array.from(mySet1) // [1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+
+// lo siguiente también funcionará si se ejecuta en un documento HTML
+mySet1.add(document.body)
+mySet1.has(document.querySelector('body')) // true
+
+// conversión entre Set y Array
+const mySet2 = new Set([1, 2, 3, 4])
+mySet2.size                    // 4
+let set1 = [...mySet2]                    // [1, 2, 3, 4]
+
+// la intersección se puede simular a través de
+const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
+
+// la diferencia se puede simular mediante
+const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
+
+// iterar entradas de Set con forEach()
+mySet2.forEach(function(value) {
+  console.log(value)
+})
+
+// 1
+// 2
+// 3
+// 4
