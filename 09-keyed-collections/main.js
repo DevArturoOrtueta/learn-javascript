@@ -148,3 +148,95 @@ mySet2.forEach(function(value) {
 // 2
 // 3
 // 4
+
+// Implementación de operaciones básicas de conjuntos
+
+function isSuperset(set, subset) {
+    for (let elem of subset) {
+      if (!set.has(elem)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  function union(setA, setB) {
+    let _union = new Set(setA);
+    for (let elem of setB) {
+      _union.add(elem);
+    }
+    return _union;
+  }
+  
+  function intersection(setA, setB) {
+    let _intersection = new Set();
+    for (let elem of setB) {
+      if (setA.has(elem)) {
+        _intersection.add(elem);
+      }
+    }
+    return _intersection;
+  }
+  
+  function symmetricDifference(setA, setB) {
+    let _difference = new Set(setA);
+    for (let elem of setB) {
+      if (_difference.has(elem)) {
+        _difference.delete(elem);
+      } else {
+        _difference.add(elem);
+      }
+    }
+    return _difference;
+  }
+  
+  function difference(setA, setB) {
+    let _difference = new Set(setA);
+    for (let elem of setB) {
+      _difference.delete(elem);
+    }
+    return _difference;
+  }
+  
+  // Ejemplos
+  const setA = new Set([1, 2, 3, 4]);
+  const setB = new Set([2, 3]);
+  const setC = new Set([3, 4, 5, 6]);
+  
+  isSuperset(setA, setB); // devuelve true
+  union(setA, setC); // devuelve Set {1, 2, 3, 4, 5, 6}
+  intersection(setA, setC); // devuelve Set {3, 4}
+  symmetricDifference(setA, setC); // devuelve Set {1, 2, 5, 6}
+  difference(setA, setC); // devuelve Set {1, 2}
+
+//   Relacion con objetos Array
+
+let myArray = ["value1", "value2", "value3"];
+
+// Use el constructor Set regular para transformar una matriz en un conjunto
+let mySet = new Set(myArray);
+
+mySet.has("value1"); // devuelve true
+
+// Utilice el operador de dispersión para transformar un conjunto en una matriz.
+console.log([...mySet]); // Le mostrará exactamente el mismo Array que myArray
+
+// Relacion con strings
+
+let text = "India";
+
+const mySet3 = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
+mySet4.size; // 5
+
+// mayúsculas, minúsculas y omisión duplicada
+new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
+
+// Use Set para garantizar la unicidad de una lista de valores
+
+const array = Array.from(document.querySelectorAll("[id]")).map(function (e) {
+    return e.id;
+  });
+  
+  const set = new Set(array);
+  console.assert(set.size == array.length);
