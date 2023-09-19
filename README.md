@@ -171,3 +171,9 @@ En esta carpeta se puede encontrar todo lo referente a los objetos.
 Se tratan los temas como la declaracion de objetos y su llamado.
 
 Ademas se vio el uso del fetch api para llamar un API REST.
+
+## 09-keyed-collections
+En esta carpeta se vio lo que son los Map, WeakMap, Set Y WeakSet.
+
+## 10-expressions-operators
+En esta carpeta se podra ver lo que son las asignaciones y expresiones regulares en Javascript, estas asignaciones y expresiones regulares son las mas comunes en javascript y nos ayudara a crear nuestras paginas/apps.
