@@ -98,3 +98,10 @@ const {nombre, apellido, edad} = persona;
 // Logical OR (||)	expr1 || expr2	Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, || returns true if either operand is true; if both are false, returns false.
 // Logical NOT (!)	!expr	Returns false if its single operand that can be converted to true; otherwise, returns true.
 // Examples of expressions that can be converted to false 
+
+
+// Conditional 
+
+const nombree = 'Arturo'
+
+nombre == 'Arturo' ? console.log('Funciona') : console.log('No funciona') 
