@@ -21,3 +21,11 @@ const Par2 = (nombre) => {
 }
 
 Par2('Arturo Ortueta const')
+
+// Hoisting en funciones
+
+Hois();
+
+function Hois(){
+    console.log('Funciona el hoisting')
+}
