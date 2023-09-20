@@ -78,3 +78,10 @@ const Argu = (...heroes) => {
 Argu('Superman', 'Batman',{name:'Lavagirl'})
 
 // De esta forma podemos mandar la cantidad de argumentos necesarios. esto puede ser util si mandamos un json.
+
+function multiply(multiplier, ...theArgs) {
+    return theArgs.map((element) => multiplier * element);
+  }
+  
+  const arr = multiply(2, 15, 25, 42);
+  console.log(arr); // [30, 50, 84]
