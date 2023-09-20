@@ -65,3 +65,16 @@ function Hois(){
 
 // unescape() Deprecated
 // The unescape() method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like escape(). It's deprecated and you should use decodeURI() or decodeURIComponent() instead.
+
+// Argumentos
+
+const Argu = (...heroes) => {
+    console.log(heroes.length)
+    console.log(heroes[1])
+    console.log(JSON.stringify(heroes[2]))
+    console.log(heroes[2].name)
+}
+
+Argu('Superman', 'Batman',{name:'Lavagirl'})
+
+// De esta forma podemos mandar la cantidad de argumentos necesarios. esto puede ser util si mandamos un json.
