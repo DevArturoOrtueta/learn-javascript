@@ -85,3 +85,9 @@ function multiply(multiplier, ...theArgs) {
   
   const arr = multiply(2, 15, 25, 42);
   console.log(arr); // [30, 50, 84]
+
+//   IIFE - funciones que se ejecutan tan pronto son declaradas
+
+(function() {
+    console.log('IIFE no asincrona')
+})
