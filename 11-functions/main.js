@@ -94,3 +94,36 @@ var result = (function () {
   })();
   // Immediately creates the output:
   result; // "Barry"
+
+// Objeto arguments
+
+function func1(a, b, c) {
+    console.log(arguments[0]);
+    // Expected output: 1
+  
+    console.log(arguments[1]);
+    // Expected output: 2
+  
+    console.log(arguments[2]);
+    // Expected output: 3
+  }
+  
+  func1(1, 2, 3);
+  
+
+  function midpoint() {
+    return (
+      (Math.min.apply(null, arguments) + Math.max.apply(null, arguments)) / 2
+    );
+  }
+  
+  console.log(midpoint(3, 1, 4, 1, 5)); // 3
+
+// const args = Array.prototype.slice.call(arguments);
+// or
+// const args = Array.from(arguments);
+// or
+// const args = [...arguments];
+
+
+//  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
