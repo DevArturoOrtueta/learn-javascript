@@ -88,6 +88,9 @@ function multiply(multiplier, ...theArgs) {
 
 //   IIFE - funciones que se ejecutan tan pronto son declaradas
 
-(function() {
-    console.log('IIFE no asincrona')
-})
+var result = (function () {
+    var name = "Barry";
+    return name;
+  })();
+  // Immediately creates the output:
+  result; // "Barry"
