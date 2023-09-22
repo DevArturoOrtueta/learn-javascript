@@ -128,4 +128,36 @@ function func1(a, b, c) {
 
 //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 
-// Built-in https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm
+// Built-in https://www.tutorialspoint.com/javascript/javascript_builtin_functions.html
+
+
+// Recursion
+
+const getMaxCallStackSize = (i) => {
+  try {
+    return getMaxCallStackSize(++i);
+  } catch {
+    return i;
+  }
+};
+
+console.log(getMaxCallStackSize(0));
+
+const factorial = (n) => {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+};
+console.log(factorial(10));
+// 3628800
+
+const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
+console.log(fibonacci(10));
+// 55
+
+const reduce = (fn, acc, [cur, ...rest]) =>
+  cur === undefined ? acc : reduce(fn, fn(acc, cur), rest);
+console.log(reduce((a, b) => a + b, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
+// 45
