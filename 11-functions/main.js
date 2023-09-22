@@ -161,3 +161,102 @@ const reduce = (fn, acc, [cur, ...rest]) =>
   cur === undefined ? acc : reduce(fn, fn(acc, cur), rest);
 console.log(reduce((a, b) => a + b, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
 // 45
+
+// Closures - Lexical scoping
+
+function iniciar() {
+  var nombre = "Mozilla"; // La variable nombre es una variable local creada por iniciar.
+  function mostrarNombre() {
+    // La función mostrarNombre es una función interna, una clausura.
+    alert(nombre); // Usa una variable declarada en la función externa.
+  }
+  mostrarNombre();
+}
+iniciar();
+
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makeFunc();
+myFunc();
+
+function makeAdder(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
+
+console.log(add5(2)); // muestra 7
+console.log(add10(2)); // muestra 12
+
+
+const counter = (function () {
+  let privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+
+  return {
+    increment() {
+      changeBy(1);
+    },
+
+    decrement() {
+      changeBy(-1);
+    },
+
+    value() {
+      return privateCounter;
+    },
+  };
+})();
+
+console.log(counter.value()); // 0.
+
+counter.increment();
+counter.increment();
+console.log(counter.value()); // 2.
+
+counter.decrement();
+console.log(counter.value()); // 1.
+
+
+const makeCounter = function () {
+  let privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment() {
+      changeBy(1);
+    },
+
+    decrement() {
+      changeBy(-1);
+    },
+
+    value() {
+      return privateCounter;
+    },
+  };
+};
+const counter1 = makeCounter();
+const counter2 = makeCounter();
+
+console.log(counter1.value()); // 0.
+
+counter1.increment();
+counter1.increment();
+console.log(counter1.value()); // 2.
+
+counter1.decrement();
+console.log(counter1.value()); // 1.
+console.log(counter2.value()); // 0.
