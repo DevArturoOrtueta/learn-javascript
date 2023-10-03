@@ -1,4 +1,8 @@
-import {sayHi} from './sayHi.js';
 
-alert(sayHi); // function...
-sayHi('John'); // Hello, John!
+ import { getPokemon } from "./getPokemon";
+
+let numPokemon = prompt('Numero de pokemon')
+
+ const url = `https://pokeapi.co/api/v2/pokemon/${numPokemon}/`
+
+ alert(getPokemon(url))
