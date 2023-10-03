@@ -131,3 +131,20 @@ class Gato {
       console.log(this.nombre + ' maulla.');
     }
   }
+
+  // Iteration
+
+var uint8 = new Uint8Array([15, 192, 16]);
+
+for (var byte of uint8) {
+   console.log(byte.toString(16));
+}
+
+// Behind the scene! el for of es igual a hacer esto:
+
+var nums = [1, 5, 16];
+
+for (var i = 0; i < nums.length; i++) {
+var num = nums[i];
+   console.log(num);
+}
